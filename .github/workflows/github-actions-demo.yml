@@ -1,5 +1,4 @@
 name: GitHub Actions Demo
-
 on: 
   push:
     branches: 
@@ -15,14 +14,10 @@ on:
 jobs: 
   Build:
     runs-on: ubuntu:latest
-
     steps:
       - run: |
           echo "🎉 The job was triggered by event: ${{ github.event_name }}"
-          echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ."
-          
+          echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ."      
       - name: Checkout code
         uses: actions/checkout@v3.3.0
-
-      - name: List all files
-        run: ls -R
+      - run: tree
