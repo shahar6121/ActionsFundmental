@@ -54,6 +54,6 @@ jobs:
     steps:
       - run:
           for var in 1 2 3 4 5
-            do echo "🚀 Step ${{var}}..."
+            do echo "🚀 Step $var..."
             sleep 10
           done
